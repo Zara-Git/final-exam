@@ -1,0 +1,163 @@
+.addcard {
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 414px;
+  height:auto;
+  border: 1px solid #fbfafa;
+  background-color: #fbfafa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 60px;
+  padding: 30px;
+}
+h2 {
+  text-align: center;
+  font-size: 55px;
+}
+
+.credit-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chip-logo {
+  width: 30px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.wifi-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* CreditCard.css */
+.credit-card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  background-color: rgb(99, 158, 151);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.bitcoin-logo {
+  width: 30px;
+  height: auto;
+  justify-content: right;
+}
+
+.credit-card-number {
+  font-size: 15px;
+  justify-content: center;
+  text-align: center;
+  font-size: 8px;
+}
+
+.credit-card-holder-name {
+  margin-top: 10px;
+  font-size: 10px;
+}
+.credit-card-holder-name p {
+  font-size: 12px;
+}
+/* CreditCard.css */
+.credit-card-valid-thru {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Justera till höger */
+}
+
+.credit-card-valid-thru p,
+.credit-card-valid-thru h3 {
+  margin: 0; 
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+
+.form p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+
+.form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.form input::placeholder {
+  color: #999;
+}
+
+.form-CCV {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* Styling för texten "VALID THRU" och "CCV" */
+.form-CCV p {
+  margin: 0; /* Ta bort standardmarginaler */
+  font-weight: bold;
+  font-size: 10px;
+}
+
+/* Styling för input-fält */
+.form-CCV input {
+  width: 50%;
+  border-radius: 8px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Placeholder-text */
+.form-CCV input::placeholder {
+  color: #999;
+  width: 50%; /* Grå färg för placeholder-text */
+}
+.BTN-ADDCARD {
+  background-color: rgb(154, 201, 201);
+  border: none;
+  color: white;
+  padding: 15px 32px; /* Storlek på knappen */
+  text-align: center;
+  font-size: 16px ;
+  margin: 4px 2px;
+  border-radius: 8px; /* Rundade hörn */
+  transition-duration: 0.4s;
+  width: 100%; /* Smidig övergång när muspekaren flyttas över knappen */
+}
+
+.BTN-ADDCARD:hover {
+  background-color: #0a0a0a;   /* Mörkare grön färg när muspekaren är över knappen */
+  color: white;
+}
+
+.BTN-ADDCARD:active {
+  background-color: #7e999b; /* Ännu mörkare grön färg när knappen är nedtryckt */
+  color: white;
+}
+
+
+
