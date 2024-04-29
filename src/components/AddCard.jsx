@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux"; // Ta bort useSelector eftersom den inte används här
+import { useDispatch } from "react-redux"; 
 import { addCard, vendorColor } from "../redux/cardSlice"
 import "./AddCard.css";
 import { useNavigate } from "react-router-dom";
 
 export const AddCard = () => {
-  const dispatch = useDispatch(); // Ta bort useSelector eftersom den inte används här
+  const dispatch = useDispatch(); 
   const navigate = useNavigate();
   // const [selectedColor, setSelectedColor] = useState("");
   const [cardInfo, setCardInfo] = useState({
@@ -25,7 +25,7 @@ export const AddCard = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  //  alert("New card added successfully.");
+   alert("New card added successfully.");
     const color = vendorColor(cardInfo.vendor);
     dispatch(addCard({ ...cardInfo, color }));
     navigate("/addNewCard");
@@ -39,12 +39,12 @@ export const AddCard = () => {
       <div className="credit-card" style={{ backgroundColor: cardInfo.color }}>
         <div className="credit-card-header">
           <img
-            src="/src/assets/image/chip-dark.svg" // Uppdatera sökvägen för bilden
+            src="/src/assets/image/chip-dark.svg" 
             alt="Chip Logo"
             className="chip-logo"
           />
           <img
-            src="/src/assets/image/vendor-bitcoin.svg" // Uppdatera sökvägen för bilden
+            src="/src/assets/image/vendor-bitcoin.svg" 
             alt="Bitcoin Logo"
             className="bitcoin-logo"
           />
@@ -60,7 +60,7 @@ export const AddCard = () => {
             MM/DD: {cardInfo.validDate}
           </div>
           <div className="credit-card-valid-ccv">CVV: {cardInfo.cvv}</div>
-          {/* <div className="credit-card-color">Color: {cardInfo.color}</div> */}
+         
         </div>
       </div>
       <form onSubmit={handleSubmit}>
