@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const vendorColor = (vendor) => {
-  switch (vendor) {
+export const selectedColor = (color) => {
+  switch (color) {
     case "WHITE":
-      return "#ffffff";
+      return "#efefef";
     case "GRAY":
       return "#e5e5e5";
     case "RED":
@@ -20,11 +20,15 @@ export const vendorColor = (vendor) => {
       return "rgba(255, 174, 52, 2)";
   }
 };
+
+
 const initialState = {
   cards: [],
-  selectedVendor: "",
+  activeCardId: null,
+  selectedColor: "",
   color: {
     colorCode: "",
+    vendor:"",
   },
 };
 
@@ -33,16 +37,25 @@ export const cardSlice = createSlice({
   initialState,
   reducers: {
     addCard: (state, action) => {
+      console.log("cardreducer",action.payload);
       state.cards.push(action.payload);
     },
     deleteCard: (state, action) => {
+      console.log("delete",action.payload);
       const cardNumberToDelete = action.payload;
       state.cards = state.cards.filter(
         (card) => card.cardNumber !== cardNumberToDelete
       );
     },
-    changeColor(state, action) {
-      state.color.colorCode = vendorColor(action.payload);
+    selectCard: (state, action) => {
+      console.log("num",action.payload);
+      state.activeCardId= action.payload;
+      console.log("active", state.activeCardId);
+      
+    },
+
+    changeColor: (state, action) => {
+      state.color.colorCode = selectedColor(action.payload);
       state.cards.forEach((card) => {
         card.backgroundColor = state.color.colorCode;
       });
@@ -50,6 +63,6 @@ export const cardSlice = createSlice({
   },
 });
 
-export const { addCard, deleteCard, changeColor } = cardSlice.actions;
-
+export const { addCard, deleteCard, changeColor, selectCard } =
+  cardSlice.actions;
 export default cardSlice.reducer;

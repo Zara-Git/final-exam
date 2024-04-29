@@ -1,37 +1,51 @@
 import React from "react";
 import "./CardComponent.css";
 import { useDispatch } from "react-redux";
-import { deleteCard } from "../redux/cardSlice";
+import { deleteCard, selectCard } from "../redux/cardSlice";
 
+const CardComponent = (props) => {
+  const { card, color, isActive } = props; 
+  console.log("carddetails",card);
 
-const CardComponent = (props) => { // Receive the entire card object as a prop
-  const { card, color } = props;
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteCard(card.cardNumber)); // Access cardNumber property of the card object
-  };  
+    console.log("deletenum",card.cardNumber);
+    dispatch(deleteCard(card.cardNumber));
+  };
+
+  const handleSelect = () => {
+    console.log("click", card);
+    dispatch(selectCard(card));
+  };
+
   return (
-    <article className="card" style={{ backgroundColor: color }}>
+    <article
+      className={`card ${isActive ? "active" : ""}`}
+      style={{
+        backgroundColor: color,
+        border: isActive ? "2px solid blue" : "none",
+      }} id={color} onClick={handleSelect}
+     
+     
+    >
       <div className="card-header">
         <img
           src="src/assets/image/chip-dark.svg"
           alt="Chip Logo"
           className="chip-logo"
         />
-        <img
-          src="src/assets/image/vendor-bitcoin.svg"
-          alt="Bitcoin Logo"
-          className="bitcoin-logo"
-        />
+        
       </div>
-      <div className="card-body">
+      <div className="card-body" >
         <p>XXX XXX XXX XXX: {card.cardNumber}</p>
         <p>FIRSTNAME LASTNAME: {card.cardName}</p>
         <p>Valid: {card.validDate}</p>
         <p>cvv: {card.cvv}</p>
+       
       </div>
       <button onClick={handleDelete}>Delete Card</button>
+     
     </article>
   );
 };

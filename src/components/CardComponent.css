@@ -23,6 +23,9 @@
     padding: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    position: relative;
+      margin-top: -250px;
+   
 }
   
   .card:hover {
@@ -50,8 +53,31 @@
     grid-template-columns: repeat(1fr, auto);
     margin-top: 20px;
   }
+  #GREEN{
+    background-image: url(../assets/image/vendor-ninja.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 20%;
+    
+  }
   
-
+  #GRAY{
+    background-image: url(../assets/image/vendor-bitcoin.svg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: 85% 20%;
+  }
+  #RED{
+    background-image: url(../assets/image/vendor-blockchain.svg);
+    background-repeat: no-repeat; background-repeat: no-repeat;
+    background-position: 85% 20%;
+  }
+  #BLUE{
+    background-image: url(../assets/image/vendor-evil.svg);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-position: 85% 20%;
+  }
+  
 
   
   

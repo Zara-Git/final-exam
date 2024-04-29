@@ -1,13 +1,18 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux"; 
-import { addCard, vendorColor } from "../redux/cardSlice"
+import { useDispatch } from "react-redux";
+import {
+  addCard,
+  changeColor,
+  selectedColor,
+  deleteCard,
+} from "../redux/cardSlice";
 import "./AddCard.css";
 import { useNavigate } from "react-router-dom";
 
 export const AddCard = () => {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const [selectedColor, setSelectedColor] = useState("");
+
   const [cardInfo, setCardInfo] = useState({
     cardNumber: "",
     cardName: "",
@@ -18,35 +23,36 @@ export const AddCard = () => {
   });
 
   const handleChange = (e) => {
+    console.log("event", e.target);
     const { name, value } = e.target;
+    console.log("name", name);
+    console.log("value", value);
 
     setCardInfo({ ...cardInfo, [name]: value });
   };
-
+  console.log("cardinfo", cardInfo);
   const handleSubmit = (e) => {
     e.preventDefault();
-   alert("New card added successfully.");
-    const color = vendorColor(cardInfo.vendor);
-    dispatch(addCard({ ...cardInfo, color }));
+    alert("New card added successfully.");
+
+    dispatch(addCard({ ...cardInfo }));
     navigate("/addNewCard");
   };
-
 
   return (
     <div className="addcard">
       <h2>Add a new bank card</h2>
 
-      <div className="credit-card" style={{ backgroundColor: cardInfo.color }}>
+      <div
+        className="credit-card"
+        style={{ backgroundColor: cardInfo.color }}
+        id={cardInfo.color}
+      >
         <div className="credit-card-header">
           <img
-            src="/src/assets/image/chip-dark.svg" 
+            src="/src/assets/image/chip-dark.svg"
             alt="Chip Logo"
             className="chip-logo"
-          />
-          <img
-            src="/src/assets/image/vendor-bitcoin.svg" 
-            alt="Bitcoin Logo"
-            className="bitcoin-logo"
           />
         </div>
         <div className="credit-card-body">
@@ -60,7 +66,6 @@ export const AddCard = () => {
             MM/DD: {cardInfo.validDate}
           </div>
           <div className="credit-card-valid-ccv">CVV: {cardInfo.cvv}</div>
-         
         </div>
       </div>
       <form onSubmit={handleSubmit}>
@@ -98,15 +103,12 @@ export const AddCard = () => {
             onChange={handleChange}
           />
         </div>
-        <select onChange={handleChange} name="vendor" value={cardInfo.vendor}>
-        
-          <option value="WHITE">WHITE</option>
-          <option value="GRAY">GRAY</option>
-          <option value="RED">RED</option>
-          <option value="ORANGE">ORANGE</option>
-          <option value="BLUE">BLUE</option>
-          <option value="GREEN">GREEN</option>
-          <option value="PINK">PINK</option>
+        <select onChange={handleChange} name="color" value={cardInfo.color}>
+          <option value="WHITE">Select Bank</option>
+          <option value="VIOLET">Ninja Bank</option>
+          <option value="GRAY">Bitcoin Inc</option>
+          <option value="ORANGE">Block Chain In</option>
+          <option value="LIGHTBLUE">Evil Corp</option>
         </select>
 
         <button type="submit" className="BTN-ADDCARD">

@@ -1,89 +1,24 @@
-/* .card {
-    display: flex;
-    justify-content: center;
-  }
+#VIOLET{
+  background-image: url(../assets/image/vendor-ninja.svg);
+  background-repeat: no-repeat;
+  background-position: 85% 20%;
   
-  .credit-card {
-    width: 350px;
-    height: 250px;
-    background-color: #f4cece;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .credit-card-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-  }
-  
-  .chip-logo {
-    width: 50px;
-    height: auto;
-  }
-  
-  .bitcoin-logo {
-    width: 40px;
-    height: auto;
-  }
-  
-  .credit-card-body {
-    padding: 20px;
-  }
-  
-  .credit-card-number {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .credit-card-holder-name {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
-  .credit-card-valid-thru {
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .credit-card-ccv{ 
-    font-size: 16px;
-    display: flex;
-    justify-content:space-between;
-    margin-bottom: 20px;
-  }
-  .credit-card-valid-thru h3 {
-    margin: 0;
-  }
-  .link {
-    text-decoration: none;
-    color: #333; /* Standard text color */
-    /* padding: 5px 10px;
-    margin-right: 10px;
-  }
-  
-  .link:hover {
-    background-color: #f0f0f0; 
-    color: #000;}
+}
 
-  .BTN-DELETECARD {
-    background-color: #ff5f5f; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 5px; 
-    font-size: 16px; 
-  }
-  
-  h1 {
-    font-family: Arial, sans-serif; 
-    font-size: 35px; 
-    color: #333; 
-    text-align: center; 
-    border-radius: 10px; 
-    background-color: #c0c4a2; 
-    padding: 8px; 
-   
-}  */
-  
+#GRAY{
+  background-image: url(../assets/image/vendor-bitcoin.svg);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: 85% 20%;
+}
+#RED{
+  background-image: url(../assets/image/vendor-blockchain.svg);
+  background-repeat: no-repeat; background-repeat: no-repeat;
+  background-position: 85% 20%;
+}
+#BLUE{
+  background-image: url(../assets/image/vendor-evil.svg);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position: 85% 20%;
+}
