@@ -65,7 +65,7 @@ export const AddCard = () => {
           <div className="credit-card-valid-thru">
             MM/DD: {cardInfo.validDate}
           </div>
-          <div className="credit-card-valid-ccv">CVV: {cardInfo.cvv}</div>
+          <div className="credit-card-valid-ccv">cvv: {cardInfo.cvv}</div>
         </div>
       </div>
       <form onSubmit={handleSubmit}>

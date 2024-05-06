@@ -38,7 +38,7 @@ const CardComponent = (props) => {
         
       </div>
       <div className="card-body" >
-        <p>XXX XXX XXX XXX: {card.cardNumber}</p>
+        <p>XXX XXX XXX XXX {card.cardNumber}</p>
         <p>FIRSTNAME LASTNAME: {card.cardName}</p>
         <p>Valid: {card.validDate}</p>
         <p>cvv: {card.cvv}</p>

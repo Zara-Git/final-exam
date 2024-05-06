@@ -46,12 +46,12 @@ export const AddNewCard = () => {
             {/* <img src="/src/assets/image/vendor-bitcoin.svg" alt="Bitcoin Logo" className="bitcoin-logo" /> */}
           </div>
           <div className="credit-card-body">
-            <div className="credit-card-number">CardNumber: {activeCard.cardNumber}</div>
-            <div className="credit-card-holder-name">Name: {activeCard.cardName}</div>
+            <div className="credit-card-number">xxxx xxxx xxxx xxxx {activeCard.cardNumber}</div>
+            <div className="credit-card-holder-name">FIRSTNAME LASTNAME: {activeCard.cardName}</div>
             <div className="credit-card-valid-thru">MM/DD: {activeCard.validDate}</div>
-            <div className="credit-card-valid-ccv">CVV: {activeCard.cvv}</div>
-            <div className="credit-card-vendor">vendor: {activeCard.vendor}</div>
-            <div className="credit-card-color">color: {activeCard.color}</div>
+            <div className="credit-card-valid-ccv">cvv: {activeCard.cvv}</div>
+            {/* <div className="credit-card-vendor">vendor: {activeCard.vendor}</div> */}
+            {/* <div className="credit-card-color">color: {activeCard.color}</div> */}
           </div>
         </div>
         <div className="cardStack">
